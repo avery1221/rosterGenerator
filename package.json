@@ -1,8 +1,12 @@
 {
-  "name": "rosterGenerator",
+  "name": "rostergenerator",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/avery1221/rosterGenerator.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,6 +22,7 @@
   "homepage": "https://github.com/avery1221/rosterGenerator#readme",
   "dependencies": {
     "fs": "0.0.1-security",
+    "inquirer": "^7.1.0",
     "util": "^0.12.2"
   }
 }

@@ -1,13 +1,12 @@
 const inquirer = require('inquirer');
-
 const fs = require("fs");
-const util = require("util");
 
+const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
 
-const Manager = require('./libr/Manager');
-const Engineer = require('./libr/Engineer');
-const Intern = require('./libr/Intern');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 let employeeArray = []
 
@@ -83,7 +82,7 @@ function addEmployee() {
                 case 'No':
                     console.log(employeeArray)
                     let HTML = generateHTML();
-                    writeFileAsync("./response/profile.html", HTML)
+                    writeFileAsync("./output/profile.html", HTML)
 
                     return null;
                     break;
@@ -139,23 +138,32 @@ function generateHTML() {
             crossorigin="anonymous"></script>
     
         <style>
-            header {
-                position: relative;
-                background-color: red;
-                color: white;
-                width: 100%;
-                height: 100px;
-            }
-    
-            header h1 {
-                position: relative;
-                left: 40%
-            }
-    
-            .card-header {
-                background-color: blue;
-                color: white;
-            }
+        header {
+            position: relative;
+            background-color: green;
+            color: white;
+            width: 100%;
+            height: 100px;
+            border-color: blue;
+            border-style: double;
+        }
+        header h1 {
+            position: relative;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 64px;
+        }
+        .card-header {
+            background-color: blue;
+            color: white;
+        }
+        .card-header h5 {
+            font-size: 24px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .card-body {
+            line-height: 30px;
+        }
         </style>
     </head>
     
